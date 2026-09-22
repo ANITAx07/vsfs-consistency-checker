@@ -64,6 +64,4 @@ Examples:
 - The current implementation checks only the **first direct block pointer** per inode (`direct_block`); it does not yet walk multiple direct pointers or indirect/double-indirect/triple-indirect blocks. Extending block traversal to cover those would make the duplicate and bad-block checks fully complete per the spec.
 - Bad-block detection (blocks referenced with an index outside the valid data range) is partially covered via the bitmap/reference checks; a dedicated explicit range check on raw pointer values could be added for full coverage of that feature.
 
-## Course context
 
-CSE321 Project 2, group assignment (max 3 members). See the original assignment PDF for full specification and grading breakdown.
